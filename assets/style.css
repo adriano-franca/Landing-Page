@@ -1,6 +1,6 @@
 *{
+    padding: 0;
     margin: 0;
-    background-color:var(--background-color);
 }
 
 :root{
@@ -49,7 +49,7 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    height: 300px;
     width: 50%;
 }
 
@@ -66,4 +66,46 @@ button{
 section p{
     font-size: 20px;
     padding: 5px;
+}
+
+footer {
+    width: 100%;
+    background-color:#bd2d2d ;
+    color: var(--text-color);
+    text-align: left;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.social-icons {
+    margin-left: 20px;
+    display: flex; 
+    gap: 10px; 
+}
+
+.social-icons img {
+    width: 40px; 
+    transition: transform 0.3s, filter 0.3s;
+}
+
+
+.social-icons img:hover {
+    transform: scale(1.1); 
+    filter: brightness(1.2); 
+}
+
+.footer-logo {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-logo img {
+    width: 80px; 
+}
+
+.footer-address {
+    font-size: 20px;
+    text-align: center;
 }
