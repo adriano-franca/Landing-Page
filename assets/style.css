@@ -1,6 +1,8 @@
 *{
     padding: 0;
     margin: 0;
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
 }
 
 :root{
@@ -34,6 +36,47 @@ button{
     cursor: pointer;
     background-color: var(--primary-color);
     color:var(--text-color)
+}
+
+.presentation-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--secondary-color) 50%, var(--background-color) 50%);
+    color: #333;
+}
+
+.content {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.content p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.content a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 .sobre-nos{
@@ -70,42 +113,60 @@ section p{
 
 footer {
     width: 100%;
-    background-color:#bd2d2d ;
+    background-color: var(--background-color);
     color: var(--text-color);
-    text-align: left;
     padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
+    gap: 20px;
 }
 
 .social-icons {
-    margin-left: 20px;
-    display: flex; 
-    gap: 10px; 
+    display: flex;
+    gap: 15px;
 }
 
 .social-icons img {
-    width: 40px; 
+    width: 40px;
     transition: transform 0.3s, filter 0.3s;
 }
 
-
 .social-icons img:hover {
-    transform: scale(1.1); 
-    filter: brightness(1.2); 
-}
-
-.footer-logo {
-    text-align: center;
-    flex: 1;
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
 .footer-logo img {
-    width: 80px; 
+    width: 100px;
 }
 
 .footer-address {
-    font-size: 20px;
+    color: black;
+    font-size: 16px;
     text-align: center;
+    flex: 1;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-address {
+        font-size: 14px;
+        margin-top: 10px;
+    }
 }
