@@ -1,59 +1,22 @@
-function scrollToElement(elementId){
-    const element = document.getElementById(elementId)
-    element.scrollIntoView({ behavior: 'smooth'})
-}
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
 
-const animais = [
-    { nome: "Cachorros", imagem: "../assets/Foto_Cachorro.jpg" },
-    { nome: "Gatos", imagem: "../assets/Foto_Gato.png" },
-    { nome: "Aves", imagem: "../assets/Foto_Passaro.webp" },
-    { nome: "Peixes", imagem: "../assets/Foto_Peixe.avif" },
-    { nome: "Coelhos", imagem: "../assets/Foto_Coelho.avif" },
-    { nome: "Tartarugas", imagem: "../assets/Foto_Tartaruga.jpg" },
-    { nome: "Cavalos", imagem: "../assets/Foto_Cavalo.jpg" }
-];
+const scrollAmount = 220; 
 
-const catalog = document.getElementById("catalog");
-
-function criarProdutos(lista) {
-    lista.forEach(animal => {
-        const produto = document.createElement("div");
-        produto.classList.add("product");
-
-        produto.innerHTML = `
-            <img src="${animal.imagem}" alt="${animal.nome}">
-            <p class="product-name">${animal.nome}</p>
-            <button class="view-product-btn">Ver Produtos</button>
-        `;
-
-        produto.querySelector(".view-product-btn").addEventListener("click", () => {
-            alert(`Calma aí jovem, estamos em desenvolvimento ainda. Produto: ${animal.nome}`);
-        });
-
-        catalog.appendChild(produto);
-    });
-}
-
-criarProdutos(animais);
-
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
-
-const scrollAmount = 220;
-
-prevButton.addEventListener("click", () => {
-    catalog.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+prevButton.addEventListener('click', () => {
+  catalog.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 });
 
-nextButton.addEventListener("click", () => {
-    catalog.scrollBy({ left: scrollAmount, behavior: "smooth" });
+nextButton.addEventListener('click', () => {
+  catalog.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 });
 
-const commentForm = document.getElementById("comment-form");
-const commentsContainer = document.getElementById("comments-container");
-const commentText = document.getElementById("comment-text");
-const productSelect = document.getElementById("product-select");
-
+const viewProductButtons = document.querySelectorAll('.view-product-btn');
+viewProductButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    alert('Calma aí jovem, estamos em desenvolvimento ainda.');
+  });
+});
 // Evento para adicionar novo comentário
 commentForm.addEventListener("submit", function (e) {
     e.preventDefault();
