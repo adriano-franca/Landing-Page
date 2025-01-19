@@ -14,25 +14,26 @@
         </div>
         <div>
             <nav>
-                <button class="btn-header">Início</button>
-                <button class="btn-header">Sobre Nós</button>
-                <button class="btn-header">Produtos</button>
-                <button class="btn-header">Mais Vendidos</button>
-                <button class="btn-header">Comentários</button>
-                <button class="btn-header">Contatos</button>
+                <button onclick="scrollToElement('presentation-section')" class="btn-header">Início</button>
+                <button onclick="scrollToElement('sobre-section')" class="btn-header">Sobre Nós</button>
+                <button onclick="scrollToElement('catalog-section')" class="btn-header">Produtos</button>
+                <button onclick="scrollToElement('')" class="btn-header">Mais Vendidos</button>
+                <button onclick="scrollToElement('comments-section')" class="btn-header">Comentários</button>
+                <button onclick="scrollToElement('')" class="btn-header">Contatos</button>
             </nav>
         </div>
     </header>
     <main>
-        <section class="presentation-section">
+        <section id="presentation-section" class="presentation-section">
             <div class="content">
                 <h1>Bem-vindo à Terra Zoo</h1>
                 <p>Seu pet merece o melhor! Encontre tudo o que ele precisa em um só lugar.</p>
-                <button>Ver Produtos</button>
+                <button onclick="scrollToElement('catalog-section')">Ver Produtos</button>
             </div>
         </section>
-        <section class="sobre-nos">
+        <section id="sobre-section"class="sobre-nos">
             <div class="text-sobre-nos">
+                <h2>Sobre Nós</h2>
                 <p>
                     A história da Terra Zoo começou com o surgimento da família Vieira Brasil, no interior do Rio Grande do Norte, com a união de Manoel Vieira Brasil 
                     e Raimunda Vieira Brasil, que se conheceram bem jovens, vindos de famílias de agricultores e comerciantes.
@@ -59,9 +60,9 @@
             </div>
         </section>
         
-        <section>
-
+        <section id="catalog-section">
             <div class="catalog-container">
+                <h2>Para quem vendemos</h2>
                 <div class="catalog" id="catalog"></div>           
                  <div class="navigation">
                 <button class="nav-button nav-left" id="prev">&#8592;</button>
@@ -70,7 +71,7 @@
             </div>
 
         </section>
-        <section class="comments-section">
+        <section id="comments-section" class="comments-section">
             <h2>Comentários e Avaliações</h2>
         
             <!-- Comentários Existentes -->
@@ -80,7 +81,7 @@
                 <div class="comment-details">
                   <h4>João Silva</h4>
                   <span>Produto: Testosterona de Cavalo</span>
-                  <p>Produto de extrema excelencia. O meu cavalo gostou demais!Aprovado</p>
+                  <p>Produto de extrema excelência. O meu cavalo gostou demais!Aprovado</p>
                 </div>
               </div>
         
@@ -130,92 +131,7 @@
             </div>
         </footer>
 
-        <script>
-            const animais = [
-            { nome: "Cachorros", imagem: "../assets/Foto_Cachorro.jpg" },
-            { nome: "Gatos", imagem: "../assets/Foto_Gato.png" },
-            { nome: "Pássaros", imagem: "../assets/Foto_Passaro.webp" },
-            { nome: "Peixes", imagem: "../assets/Foto_Peixe.avif" },
-            { nome: "Coelhos", imagem: "../assets/Foto_Coelho.avif" },
-            { nome: "Tartarugas", imagem: "../assets/Foto_Tartaruga.jpg" },
-            { nome: "Cavalos", imagem: "../assets/Foto_Cavalo.jpg" }
-            ];
-
-            const catalog = document.getElementById("catalog");
-
-            function criarProdutos(lista) {
-            lista.forEach(animal => {
-                const produto = document.createElement("div");
-                produto.classList.add("product");
-
-                produto.innerHTML = `
-                <img src="${animal.imagem}" alt="${animal.nome}">
-                <p class="product-name">${animal.nome}</p>
-                <button class="view-product-btn">Ver Produtos</button>
-                `;
-
-                produto.querySelector(".view-product-btn").addEventListener("click", () => {
-                alert(`Calma aí jovem, estamos em desenvolvimento ainda. Produto: ${animal.nome}`);
-                });
-
-                catalog.appendChild(produto);
-            });
-            }
-
-            criarProdutos(animais);
-
-            const prevButton = document.getElementById("prev");
-            const nextButton = document.getElementById("next");
-
-            const scrollAmount = 220; 
-
-            prevButton.addEventListener("click", () => {
-            catalog.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-            });
-
-            nextButton.addEventListener("click", () => {
-            catalog.scrollBy({ left: scrollAmount, behavior: "smooth" });
-            });
-
-
-
-
-            const commentForm = document.getElementById("comment-form");
-            const commentsContainer = document.getElementById("comments-container");
-            const commentText = document.getElementById("comment-text");
-            const productSelect = document.getElementById("product-select");
-
-            // Evento para adicionar novo comentário
-            commentForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            // Valores do formulário
-            const commentContent = commentText.value;
-            const selectedProduct = productSelect.value;
-
-            // Criar elemento de comentário
-            const newComment = document.createElement("div");
-            newComment.classList.add("comment");
-
-            newComment.innerHTML = `
-                <img src="https://via.placeholder.com/50" alt="Usuário">
-                <div class="comment-details">
-                <h4>Usuário Anônimo</h4>
-                <span>Produto: ${selectedProduct}</span>
-                <p>${commentContent}</p>
-                </div>
-            `;
-
-            // Adicionar o novo comentário ao container
-            commentsContainer.appendChild(newComment);
-
-            // Limpar o formulário
-            commentText.value = "";
-            productSelect.value = "";
-            });
-
-
-        </script>
+        <script src="../scripts/script.js"></script>
         
     </main>
 

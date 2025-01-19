@@ -14,7 +14,8 @@
 
 .header{
     display: flex;
-    padding: 10px;
+    position: fixed;
+    width: 100%;
     flex-direction: row;
     text-align: center;
     align-items: center;
@@ -193,11 +194,6 @@ footer {
 
 /* Produtos animais */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
   .catalog-container {
     position: relative;
     width: 100%;
@@ -262,7 +258,7 @@ body {
     width: 100%;
   }
   .nav-button {
-    background-color: #832A2F;
+    background-color: var(--primary-color);
     border: none;
     color: #fff;
     padding: 10px;
@@ -286,19 +282,11 @@ body {
 
 /*Comentarios*/
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff; /* Fundo branco */
-  }
-
   .comments-section {
     width: 90%;
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -368,7 +356,7 @@ body {
   }
 
   .comment-form button {
-    background-color: #832a2f;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -379,7 +367,7 @@ body {
   }
 
   .comment-form button:hover {
-    background-color: #0056b3;
+    background-color: var(--secondary-color);
   }
 
 
