@@ -1,7 +1,6 @@
 *{
     padding: 0;
     margin: 0;
-    background-color: var(--background-color);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -20,6 +19,7 @@
     text-align: center;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--background-color);
 }
 
 header img{
@@ -119,6 +119,8 @@ button{
     align-items: center;
     text-align: justify;
     gap: 20px;
+    background-color: var(--background-color);
+
 }
 
 .sobre-nos-img{
@@ -187,6 +189,199 @@ footer {
     flex: 1;
     font-style: normal;
 }
+
+
+/* Produtos animais */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .catalog-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    padding: 20px 0;
+  }
+  .catalog {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 0 50px;
+  }
+  .catalog::-webkit-scrollbar {
+    display: none;
+  }
+  .product {
+    flex: 0 0 200px;
+    height: 320px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .view-product-btn {
+    background-color: #832A2F;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  .view-product-btn:hover {
+    background-color: #940202;
+  }
+  .navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav-button {
+    background-color: #832A2F;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  .nav-button:hover {
+    background-color: #940202;
+  }
+  .nav-left {
+    position: absolute;
+    left: 10px;
+  }
+  .nav-right {
+    position: absolute;
+    right: 10px;
+  }
+
+/*Comentarios*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fundo branco */
+  }
+
+  .comments-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .comments-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; 
+    margin-right: 15px;
+  }
+
+  .comment-details {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    flex: 1; 
+  }
+
+  .comment-details h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline; 
+    margin-right: 10px;
+  }
+
+  .comment-details span {
+    font-size: 14px;
+    color: #555;
+    margin-right: 5px;
+  }
+
+  .comment-details p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #333;
+  }
+
+  /* Formulário de Comentário */
+  .comment-form {
+    margin-top: 30px;
+    padding: 10px;
+  }
+
+  .comment-form textarea,
+  .comment-form select {
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: none;
+    box-sizing: border-box; 
+  }
+
+  .comment-form button {
+    background-color: #832a2f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .comment-form button:hover {
+    background-color: #0056b3;
+  }
+
 
 @media (max-width: 768px) {
     .footer-content {
