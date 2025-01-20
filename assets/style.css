@@ -12,6 +12,10 @@
     --accent-color: #940202;
 }
 
+main{
+  background-color: var(--background-color);
+}
+
 .header{
     display: flex;
     position: fixed;
@@ -21,6 +25,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--background-color);
+    z-index: 1000;
 }
 
 header img{
@@ -198,7 +203,7 @@ footer {
     position: relative;
     width: 100%;
     overflow: hidden;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     padding: 20px 0;
   }
   .catalog {
