@@ -33,7 +33,7 @@ header img{
     height: auto;
 }
 
-button{
+.btn-padrao{
     border: none;
     padding: 10px;
     margin: 5px;
@@ -44,7 +44,7 @@ button{
     background-color: var(--primary-color);
 }
 
-button:hover{
+.btn-padrao:hover{
   background-color: var(--secondary-color);
   color: #fff;
   border: none;
