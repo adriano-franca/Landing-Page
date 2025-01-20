@@ -214,6 +214,9 @@ footer {
     background-color: var(--background-color);
     padding: 20px 0;
   }
+  .text-produtos{
+    padding: 10px;
+  }
   .catalog {
     display: flex;
     gap: 20px;

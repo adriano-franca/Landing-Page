@@ -1,7 +1,15 @@
-function scrollToElement(elementId){
-  const element = document.getElementById(elementId)
-  element.scrollIntoView({ behavior: 'smooth'})
+function scrollToElement(sectionId) {
+  const element = document.getElementById(sectionId);
+  if (element) {
+      const offset = document.querySelector('.header').offsetHeight; // Altura do header
+      const elementPosition = element.offsetTop - offset; // Calcula posição com ajuste
+      window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth' // Scroll suave
+      });
+  }
 }
+
 
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
