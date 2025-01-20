@@ -44,6 +44,14 @@ button{
     background-color: var(--primary-color);
 }
 
+button:hover{
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .btn-header {
     border: none;
     padding: 10px;
@@ -241,7 +249,7 @@ footer {
     text-align: center;
   }
   .view-product-btn {
-    background-color: #832A2F;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -252,7 +260,7 @@ footer {
     margin-bottom: 10px;
   }
   .view-product-btn:hover {
-    background-color: #940202;
+    background-color: var(--secondary-color);
   }
   .navigation {
     position: absolute;
@@ -274,7 +282,7 @@ footer {
     transition: background-color 0.3s ease;
   }
   .nav-button:hover {
-    background-color: #940202;
+    background-color: var(--secondary-color);
   }
   .nav-left {
     position: absolute;
@@ -316,7 +324,7 @@ footer {
   }
 
   .comment-details {
-    background-color: #f9f9f9;
+    background-color: white;
     border-radius: 8px;
     padding: 10px;
     flex: 1; 
