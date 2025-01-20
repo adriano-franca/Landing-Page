@@ -1,3 +1,8 @@
+function scrollToElement(elementId){
+  const element = document.getElementById(elementId)
+  element.scrollIntoView({ behavior: 'smooth'})
+}
+
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 
