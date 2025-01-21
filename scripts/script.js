@@ -30,6 +30,12 @@ viewProductButtons.forEach(button => {
     alert('Calma aí jovem, estamos em desenvolvimento ainda.');
   });
 });
+
+const commentForm = document.getElementById("comment-form");
+const commentText = document.getElementById("comment-text");
+const productSelect = document.getElementById("product-select");
+const commentsContainer = document.getElementById("comments-container");
+
 // Evento para adicionar novo comentário
 commentForm.addEventListener("submit", function (e) {
     e.preventDefault();
