@@ -92,4 +92,7 @@ commentForm.addEventListener("submit", function (e) {
     commentName.value = "";
     commentText.value = "";
     productSelect.value = "";
+    
 });
+
+
