@@ -32,6 +32,7 @@ viewProductButtons.forEach(button => {
 });
 
 const commentForm = document.getElementById("comment-form");
+const commentName = document.getElementById("comment-name");
 const commentText = document.getElementById("comment-text");
 const productSelect = document.getElementById("product-select");
 const commentsContainer = document.getElementById("comments-container");
@@ -43,15 +44,16 @@ commentForm.addEventListener("submit", function (e) {
     // Valores do formulário
     const commentContent = commentText.value;
     const selectedProduct = productSelect.value;
+    const nameContent = commentName.value;
 
     // Criar elemento de comentário
     const newComment = document.createElement("div");
     newComment.classList.add("comment");
 
     newComment.innerHTML = `
-        <img src="https://via.placeholder.com/50" alt="Usuário">
+        <img src="../assets/Foto_UserUndefined.jpg" alt="Usuário">
         <div class="comment-details">
-            <h4>Usuário Anônimo</h4>
+            <h4> ${nameContent}</h4>
             <span>Produto: ${selectedProduct}</span>
             <p>${commentContent}</p>
         </div>
@@ -61,6 +63,7 @@ commentForm.addEventListener("submit", function (e) {
     commentsContainer.appendChild(newComment);
 
     // Limpar o formulário
+    commentName.value = "";
     commentText.value = "";
     productSelect.value = "";
 });
