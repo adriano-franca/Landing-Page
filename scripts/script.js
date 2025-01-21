@@ -10,6 +10,32 @@ function scrollToElement(sectionId) {
   }
 }
 
+// Seleção dos elementos
+const productList = document.getElementById("product-list");
+const sortOptions = document.getElementById("sort-options");
+// Função para ordenar os produtos
+function sortProducts(criteria) {
+  const products = Array.from(productList.children);
+  // Ordenar com base no critério
+  products.sort((a, b) => {
+    const priceA = parseFloat(a.dataset.price);
+    const priceB = parseFloat(b.dataset.price);
+    const ratingA = parseFloat(a.dataset.rating);
+    const ratingB = parseFloat(b.dataset.rating);
+    if (criteria === "mais-caros") return priceB - priceA;
+    if (criteria === "mais-baratos") return priceA - priceB;
+    if (criteria === "melhor-avaliados") return ratingB - ratingA;
+  });
+  // Atualizar a ordem no DOM
+  products.forEach((product) => productList.appendChild(product));
+}
+// Evento de mudança no filtro de ordenação
+sortOptions.addEventListener("change", (event) => {
+  const selectedOption = event.target.value;
+  sortProducts(selectedOption);
+});
+
+
 
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
