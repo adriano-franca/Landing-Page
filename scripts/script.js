@@ -10,6 +10,22 @@ function scrollToElement(sectionId) {
   }
 }
 
+// Função para ajustar o padding da seção de apresentação
+function ajustarPadding() {
+  // Obtém a altura do header
+  const header = document.querySelector('.header');
+  const alturaHeader = header.offsetHeight;
+  
+  // Aplica o padding-top à seção de apresentação
+  const presentationSection = document.querySelector('.presentation-section');
+  presentationSection.style.paddingTop = alturaHeader + 'px';
+}
+
+// Chama a função ao carregar a página e sempre que a janela for redimensionada
+window.addEventListener('load', ajustarPadding);
+window.addEventListener('resize', ajustarPadding);
+
+
 // Seleção dos elementos
 const productList = document.getElementById("product-list");
 const sortOptions = document.getElementById("sort-options");

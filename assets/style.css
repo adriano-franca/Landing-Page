@@ -575,18 +575,53 @@ footer {
     flex: 1;
     font-style: normal;
 }
+
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
+  /* Alterações para telas pequenas */
+  .header {
+      flex-direction: column;
+      padding: 10px;
+  }
 
-    .social-icons {
-        justify-content: center;
-    }
+  .btn-padrao, .btn-header {
+      font-size: 14px;
+  }
 
-    .footer-address {
-        font-size: 14px;
-        margin-top: 10px;
-    }
+  .presentation-section {
+      height: auto;
+      padding: 20px;
+      padding-top: 120px; /* Ajuste o valor conforme necessário para compensar a altura do header */
+  }
+
+  .content {
+      max-width: 90%;
+  }
+
+  .sobre-nos {
+      flex-direction: column;
+  }
+
+  .catalog {
+      flex-direction: column;
+  }
+
+  .product {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-address {
+      font-size: 14px;
+      margin-top: 10px;
+  }
+
+  /* Remover os botões de navegação com setas em telas pequenas */
+  .navigation {
+      display: none;
+  }
 }
