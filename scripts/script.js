@@ -51,7 +51,12 @@ sortOptions.addEventListener("change", (event) => {
   sortProducts(selectedOption);
 });
 
-
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    alert('Calma aí jovem, estamos em desenvolvimento ainda.');
+  });
+});
 
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
