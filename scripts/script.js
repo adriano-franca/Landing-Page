@@ -93,7 +93,7 @@ commentForm.addEventListener("submit", function (e) {
     newComment.classList.add("comment");
 
     newComment.innerHTML = `
-        <img src="../assets/Foto_UserUndefined.jpg" alt="Usuário">
+        <img src="/assets/Foto_UserUndefined.jpg" alt="Usuário">
         <div class="comment-details">
             <h4> ${nameContent}</h4>
             <span>Produto: ${selectedProduct}</span>
